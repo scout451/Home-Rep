@@ -25,18 +25,22 @@ void FillArrayInt(int* const arr, const int size, const int min, const int max)
 		arr[i] = GetRandomIntValue(min, max);
 }
 
-void MinMaxElementInt(int* const arr, const int size, int* maxElement, int* minElement)
+int MaxElementInt(int* const arr, const int size)
 {
-	int* minElement = 0;
-	int* maxElement = 0;
-
+	int max = arr[0];
 	for (int i = 0; i < size; i++)
-	{
-		if (arr[i] > *maxElement)
-			*maxElement = arr[i];
-		if (arr[i] < *minElement)
-			*minElement = arr[i];
-	}
+		if (arr[i] > max)
+			max = arr[i];
+		return max;
+}
+
+int MinElementInt(int* const arr, const int size)
+{
+	int min = arr[0];
+	for (int i = 0; i < size; i++)
+		if (arr[i] < min)
+			min = arr[i];
+	return min;
 }
 
 void SortArrayInt(int* const arr, const int size)
@@ -66,18 +70,22 @@ void FillArrayDouble(double* const arr, const int size, const int min, const int
 		arr[i] = GetRandomDoubleValue(min, max);
 }
 
-void MinMaxElementDouble(double* const arr, const int size, double* maxElement, double* minElement)
+double MaxElementDouble(double* const arr, const int size)
 {
-	double* minElement = 0;
-	double* maxElement = 0;
-
+	double max = arr[0];
 	for (int i = 0; i < size; i++)
-	{
-		if (arr[i] > *maxElement)
-			*maxElement = arr[i];
-		if (arr[i] < *minElement)
-			*minElement = arr[i];
-	}
+		if (arr[i] > max)
+			max = arr[i];
+	return max;
+}
+
+double MinElementDouble(double* const arr, const int size)
+{
+	double min = arr[0];
+	for (int i = 0; i < size; i++)
+		if (arr[i] < min)
+			min = arr[i];
+	return min;
 }
 
 void SortArrayDouble(double* const arr, const int size)
@@ -105,18 +113,22 @@ void FillArrayChar(char* const arr, const int size, char min, char max)
 		arr[i] = GetRandomCharValue(min, max);
 }
 
-void MinMaxElementChar(char* const arr, const int size, char* maxElement, char* minElement)
+char MaxElementChar(char* const arr, const int size)
 {
-	char* minElement = 0;
-	char* maxElement = 0;
-
+	char max = arr[0];
 	for (int i = 0; i < size; i++)
-	{
-		if (arr[i] > *maxElement)
-			*maxElement = arr[i];
-		if (arr[i] < *minElement)
-			*minElement = arr[i];
-	}
+		if (arr[i] > max)
+			max = arr[i];
+	return max;
+}
+
+char MinElementChar(char* const arr, const int size)
+{
+	char min = arr[0];
+	for (int i = 0; i < size; i++)
+		if (arr[i] < min)
+			min = arr[i];
+	return min;
 }
 
 void SortArrayChar(char* const arr, const int size)
