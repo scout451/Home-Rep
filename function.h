@@ -4,68 +4,51 @@
 
 using namespace std;
 
-//int
-
 #ifdef INTEGER
+#define Show ShowArrayInt
 void ShowArrayInt(const int* const arr, const int size);
-#endif
 
-#ifdef INTEGER
 inline int GetRandomIntValue(const int min, const int max);
-#endif
 
-#ifdef INTEGER
+#define Fill FillArrayInt
 void FillArrayInt(int* const arr, const int size, const int min, const int max);
-#endif
 
-#ifdef INTEGER
+#define MinMax MinMaxElementInt
 void MinMaxElementInt(int* const arr, const int size, int* maxElement, int* minElement);
-#endif
 
-#ifdef INTEGER
+#define Sort SortArrayInt
 void SortArrayInt(int* const arr, const int size);
 #endif
 
-
-//double
-
 #ifdef DOUBLE
+#define Show ShowArrayDouble
 void ShowArrayDouble(const double* const arr, const int size);
-#endif
 
-#ifdef DOUBLE
 inline double GetRandomDoubleValue(const int min, const int max);
-#endif
 
-#ifdef DOUBLE
+#define Fill FillArrayDouble
 void FillArrayDouble(double* const arr, const int size, const int min, const int max);
-#endif
 
-#ifdef DOUBLE
+#define MinMax MinMaxElementDouble
 void MinMaxElementDouble(double* const arr, const int size, double* maxElement, double* minElement);
-#endif
 
-#ifdef DOUBLE
+#define Sort SortArrayDouble
 void SortArrayDouble(double* const arr, const int size);
 #endif
 
-//char
 #ifdef CHAR
+
+#define Show ShowArrayChar
 void ShowArrayChar(const char* const arr, const int size);
-#endif
 
-#ifdef CHAR
 inline char GetRandomCharValue(char min, char max);
-#endif
 
-#ifdef CHAR
-FillArrayChar(char* const arr, const int size, char min, char max);
-#endif
+#define Fill FillArrayChar
+void FillArrayChar(char* const arr, const int size, char min, char max);
 
-#ifdef CHAR
+#define MinMax MinMaxElementChar
 void MinMaxElementChar(char* const arr, const int size, char* maxElement, char* minElement);
-#endif
 
-#ifdef CHAR
+#define Sort SortArrayChar
 void SortArrayChar(char* const arr, const int size);
 #endif
